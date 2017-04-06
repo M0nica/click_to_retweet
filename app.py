@@ -19,13 +19,21 @@ def hello():
 
 def getTweets():
     word_to_search = format(request.form['word_to_search'])
-    response = twitter.search(q=word_to_search + " -filter:retweets", result_type="recent", count=5)
+    response = twitter.search(q=word_to_search + " -filter:retweets", result_type="recent", count=10)
     try:
         tweet_list = []
+        id_num = 0
         for tweet in response['statuses']:
-            tweet['text'] = "<div class='twitter-tweet'>"+ Twython.html_for_tweet(tweet) + '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweet["id_str"] + '">Click to RT</a></div>'
+
+
+            tweet['text'] = "<div class='twitter-tweet'>"+ Twython.html_for_tweet(tweet) + '</div>'
             # print(tweet["text"], tweet["id_str"])
             tweet_list.append(tweet['text'])
+
+
+            ctt_text_area = '<a href="https://twitter.com/intent/retweet?tweet_id=' + tweet["id_str"] + '">Click to RT</a> <button onclick="toggleLink(id)" id="button-'+ str(id_num)+'"type="button">Get Click to RT Link</button> <div style="display: none;"><textarea rows="4" cols="50" id="button-'+ str(id_num)+'">' + "https://twitter.com/intent/retweet?tweet_id=" + tweet["id_str"] + '</textarea> <p>Share this link. When clicked it will prompt people to RT the specified tweet.</p></div>'
+            tweet_list.append(ctt_text_area)
+            id_num = id_num + 1
 
         if len(tweet_list) > 0:
             results = " <br> ".join(tweet_list)
