@@ -1,0 +1,71 @@
+.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  background-color: #fff;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+  max-width: 468px;
+}
+
+.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.twitter-tweet a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+.twitter-tweet a:hover,
+.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #daefef;
+  /*margin: auto;
+  width: 50%;*/
+  /*text-align: center;*/
+  padding-top: 5em;
+}
+.h1, h1 {
+    font-size: 40px;
+}
+
+h1, footer{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+
+}
+
+footer {
+  margin-top: 2em;
+}
+
+
+
+
+form {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    margin-top: 1em;
+}
