@@ -4,4 +4,4 @@ Add topics
 
 `getTweets():`
 
-Uses Twython to search Twitter for tweets; the tweets are then rendered and a click to tweet link is generated.
+Uses Twython to search Twitter for tweets; the tweets are then rendered and a click to tweet link is generated with the option to click to tweet or to share the click to tweet link.
