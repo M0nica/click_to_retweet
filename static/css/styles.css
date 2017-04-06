@@ -1,17 +1,28 @@
-.twitter-tweet {
+#svg_icon{
+
+  fill: #fff;
+  width: 1em;
+  }
+
+  /*.sharebuttons{
+    margin: auto;
+    width: 50%;
+  }*/
+  .twitter-tweet {
   display: inline-block;
   font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
-  background-color: #fff;
+  background-color: white;
   border-color: #eee #ddd #bbb;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   margin: 10px 5px;
-  padding: 0 16px 16px 16px;
+  /*padding: 0 16px 16px 16px;*/
+  padding: 2em;
   max-width: 468px;
 }
 
@@ -41,8 +52,16 @@ body {
   /*text-align: center;*/
   padding-top: 5em;
 }
+
+p{
+  margin: auto;
+  width: 50%;
+
+}
 .h1, h1 {
     font-size: 40px;
+    color: #00aced;
+
 }
 
 h1, footer{

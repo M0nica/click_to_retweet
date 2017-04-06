@@ -26,14 +26,14 @@ function toggleLink(id) {
     }
 }</script>
 </head>
-<nav class="navbar navbar-default navbar-fixed-top">
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
   Click to Retweet
   </div>
-</nav>
+</nav> -->
 
 <body>
-  <h1>Click to Retweet</h1>
+  <h1>Click to RT <img id="svg_icon" src="{{url_for('static', filename='retweet.svg')}}" /></h1>
   <p>Use the search bar on the left-hand side to search Twitter for the tweet you would like to RT</p>
 
   <div class="container">
