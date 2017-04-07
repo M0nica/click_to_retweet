@@ -61,7 +61,7 @@ function validateTweetUrl(){
 
 <body>
   <h1>Click to RT <img id="svg_icon" src="{{url_for('static', filename='retweet.svg')}}" /></h1>
-  <p>Use the search bar on the left-hand side to search Twitter for the tweet you would like to RT</p>
+  <p>Use the search bar on the left-hand side to search Twitter for the tweet you would like to create a link to retweet for. If you have the URL handy you can input it in the form on the right-hand side.</p>
 
   <div class="container">
     <div class="row">
@@ -86,6 +86,7 @@ function validateTweetUrl(){
       <div class="col-xs-6">
         <h4>Enter Tweet URL</h4>
         <input type="string" onchange="validateTweetUrl(value)" id="tweetUrl">
+          <br>
           <input type="button" value="Enter">
           <div id="url_warning"></div>
       </div>
