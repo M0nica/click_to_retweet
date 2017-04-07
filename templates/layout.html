@@ -31,7 +31,7 @@ function validateTweetUrl(){
 
   //var urlregex = new RegExp("^https:\/\/twitter.com\/(\w|\d)*\/status\/\d*$");
   if (/^https:\/\/twitter.com\/(\w|\d)*\/status\/\d*$/.test(tweet_url)){
-    console.log("this matches");
+     console.log("this matches");
 
       var warning = document.getElementById("url_warning");
       warning.innerHTML = "";
@@ -44,7 +44,7 @@ function validateTweetUrl(){
   else {
     console.log("this does not match");
     var warning = document.getElementById("url_warning");
-    warning.innerHTML = "Sorry, this is not a valid Twitter URL";
+    warning.innerHTML = "Sorry, this is not a valid Twitter URL. Try again with a format like this: https://twitter.com/waterproofheart/status/811317498456997888";
 
   }
   return;
@@ -85,7 +85,7 @@ function validateTweetUrl(){
       </div>
       <div class="col-xs-6">
         <h4>Enter Tweet URL</h4>
-        <input type="string" onclick="validateTweetUrl(value)" id="tweetUrl">
+        <input type="string" onchange="validateTweetUrl(value)" id="tweetUrl">
           <input type="button" value="Enter">
           <div id="url_warning"></div>
       </div>
