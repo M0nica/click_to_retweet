@@ -4,6 +4,10 @@
   width: 1em;
   }
 
+  input[type="string"] {
+      width: 60%;
+      height: 10%;
+  }
   /*.sharebuttons{
     margin: auto;
     width: 50%;

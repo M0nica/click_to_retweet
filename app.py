@@ -31,7 +31,7 @@ def getTweets():
             tweet_list.append(tweet['text'])
 
 
-            ctt_text_area = '<div class="sharebuttons"><a href="https://twitter.com/intent/retweet?tweet_id=' + tweet["id_str"] + '">Click to RT</a> <button onclick="toggleLink(id)" id="button-'+ str(id_num)+'"type="button">Get Click to RT Link</button> <span style="display: none;"><textarea rows="4" cols="50" id="button-'+ str(id_num)+'">' + "https://twitter.com/intent/retweet?tweet_id=" + tweet["id_str"] + '</textarea> <p>Share this link. When clicked it will direct people Twitter and confirm that they would like RT the specified tweet.</p></span></div>'
+            ctt_text_area = '<div class="sharebuttons"><a href="https://twitter.com/intent/retweet?tweet_id=' + tweet["id_str"] + '">Click to RT</a> <button onclick="toggleLink(id)" id="button-'+ str(id_num)+'"type="button" class="btn btn-default">Get Click to RT Link</button> <span style="display: none;"><textarea rows="4" cols="50" id="button-'+ str(id_num)+'">' + "https://twitter.com/intent/retweet?tweet_id=" + tweet["id_str"] + '</textarea> <p>Share this link. When clicked it will direct people Twitter and confirm that they would like RT the specified tweet.</p></span></div>'
             tweet_list.append(ctt_text_area)
             id_num = id_num + 1
 
