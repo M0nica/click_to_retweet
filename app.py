@@ -1,11 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request
 from twython import Twython, TwythonError
-import config
+from config import *
 from flask import Markup
 
 
 # create a Twython object by passing the necessary secret passwords
-twitter = Twython(config.api_key, config.api_secret, config.access_token, config.token_secret)
+twitter = Twython(api_key, api_secret, access_token, token_secret)
 
 
 app = Flask(__name__)
@@ -16,7 +16,6 @@ def hello():
 
 
 @app.route("/entry", methods=['POST'])
-
 def getTweets():
     word_to_search = format(request.form['word_to_search'])
     response = twitter.search(q=word_to_search + " -filter:retweets AND -filter:replies", result_type="recent", count=10)
