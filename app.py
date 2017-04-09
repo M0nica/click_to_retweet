@@ -34,7 +34,7 @@ def getTweets():
             tweet_list.append(ctt_text_area)
             id_num = id_num + 1
 
-        if len(tweet_list) > 0:
+        if len(tweet_list) > 0 and len(word_to_search) > 0:
             results = " <br> ".join(tweet_list)
         else:
             results = "No tweets were found."
